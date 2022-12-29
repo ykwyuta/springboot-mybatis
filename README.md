@@ -1,1 +1,2 @@
-# tiny-concierge-springboot
+# Spring Bootのテンプレプロジェクト
+
