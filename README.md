@@ -6,7 +6,7 @@ docker pull ghcr.io/ykwyuta/springboot-mybatis:0.0.1-snapshot
 
 ## CodespacesからGithub PackagesにコンテナのイメージをPushする場合
 
-トークンは`GITHUB_TOKEN`を使えば良いはずですが、何度か試してもPushに失敗したので別途作成してシークレットに入れています。
+トークンはロールを付与して`GITHUB_TOKEN`を使えば良いはずですが、何度か試してもPushに失敗したので別途作成してシークレットに入れています。
 
 ```groovy
 tasks.named("bootBuildImage") {
