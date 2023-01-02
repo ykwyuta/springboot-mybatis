@@ -41,13 +41,6 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.named("bootBuildImage") {
-	docker {
-		publishRegistry {
-			username = "ykwyuta"
-			password = System.getenv()['PACKAGE_TOKEN']
-			url = "ghcr.io"
-		}
-	}
 	publish = false
 	imageName.set("ghcr.io/ykwyuta/springboot-mybatis:${project.version}")
 	environment["BP_JVM_VERSION"] = "17"
