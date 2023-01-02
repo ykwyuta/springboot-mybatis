@@ -36,6 +36,10 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+tasks.withType(JavaCompile) {
+  options.compilerArgs << '-Xlint:deprecation'
+}
+
 tasks.named("bootBuildImage") {
 	docker {
 		publishRegistry {
@@ -44,7 +48,7 @@ tasks.named("bootBuildImage") {
 			url = "ghcr.io"
 		}
 	}
-	publish = true
+	publish = false
 	imageName.set("ghcr.io/ykwyuta/springboot-mybatis:${project.version}")
 	environment["BP_JVM_VERSION"] = "17"
 	environment["BP_NATIVE_IMAGE"] = "false"
