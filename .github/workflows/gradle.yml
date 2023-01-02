@@ -27,7 +27,7 @@ jobs:
       with:
           registry: ghcr.io
           username: ykwyuta
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.PACKAGE_TOKEN }}
     - name: Push
       run: |
         docker push ghcr.io/ykwyuta/springboot-mybatis:0.0.1-SNAPSHOT
