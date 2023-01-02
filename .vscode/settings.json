@@ -1,0 +1,10 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.runtimes": [{
+        "name": "JavaSE-17",
+        "path": "/usr/local/sdkman/candidates/java/17.0.5-ms",
+        "default": true
+      }
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
+}
